@@ -13,8 +13,8 @@ module.exports = {
         plugins: [
             new IgnorePlugin(/^css-tree$/),
             new webpack.optimize.LimitChunkCountPlugin({
-                maxChunks: 1,
-            }),
+                maxChunks: 1
+            })
         ]
     },
     transpileDependencies: [

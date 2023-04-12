@@ -5,7 +5,7 @@ import Vue from 'vue/dist/vue'
 const MarkdownPalettes = class MarkdownPalettes {
     #vueInstance = null
 
-    constructor(el, config = defaultConfig) {
+    constructor (el, config = defaultConfig) {
         this.#vueInstance = new Vue({
             ...Editor,
             data () {
@@ -23,14 +23,13 @@ const MarkdownPalettes = class MarkdownPalettes {
         return this.#vueInstance.$data.value
     }
 
-    set content(value) {
+    set content (value) {
         this.#vueInstance.$data.value = value
     }
 
-    static defaultContentParser(content) {
-        return defaultContentParser(content);
+    static defaultContentParser (content) {
+        return defaultContentParser(content)
     }
 }
 
 window.MarkdownPalettes = MarkdownPalettes
-
